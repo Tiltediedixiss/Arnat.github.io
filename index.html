@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Arnat Zhagaparov - Portfolio</title>
+  <style>
+    :root {
+      --primary-color: #004080;
+      --secondary-color: #ffffff;
+      --bg-color: #f4f7fa;
+      --accent-color: #0077cc;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: var(--bg-color);
+      color: #333;
+    }
+
+    header {
+      background: linear-gradient(90deg, var(--primary-color), #0066cc);
+      color: var(--secondary-color);
+      text-align: center;
+      padding: 40px 20px;
+    }
+
+    .profile-img {
+      width: 160px;
+      height: 160px;
+      border-radius: 50%;
+      margin: 20px auto 10px;
+      display: block;
+      border: 4px solid white;
+      object-fit: cover;
+    }
+
+    header h1 {
+      margin: 10px 0 0;
+      font-size: 2.5rem;
+    }
+
+    header p {
+      margin-top: 10px;
+      font-size: 1.2rem;
+      opacity: 0.9;
+    }
+
+    main {
+      max-width: 1000px;
+      margin: auto;
+      padding: 40px 20px;
+    }
+
+    section {
+      margin-bottom: 50px;
+    }
+
+    h2 {
+      font-size: 1.8rem;
+      margin-bottom: 10px;
+      color: var(--primary-color);
+      border-bottom: 2px solid #ccc;
+      padding-bottom: 5px;
+    }
+
+    .project {
+      margin-bottom: 25px;
+      padding: 15px;
+      background-color: #fff;
+      border-left: 4px solid var(--accent-color);
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    }
+
+    .project-main {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .screenshot-scroller {
+      display: flex;
+      overflow-x: auto;
+      gap: 15px;
+      padding: 10px 0;
+      scroll-snap-type: x mandatory;
+      -webkit-overflow-scrolling: touch;
+      justify-content: center;
+    }
+
+    .screenshot-scroller img {
+      max-height: 400px;
+      height: auto;
+      width: auto;
+      max-width: 100%;
+      border-radius: 10px;
+      scroll-snap-align: center;
+      flex-shrink: 0;
+    }
+
+    @media (max-width: 768px) {
+      header h1 {
+        font-size: 2rem;
+      }
+
+      .profile-img {
+        width: 120px;
+        height: 120px;
+      }
+
+      .screenshot-scroller img {
+        max-height: 280px;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .screenshot-scroller img {
+        max-height: 220px;
+      }
+    }
+
+    .project-content h3 {
+      margin: 0;
+      font-size: 1.2rem;
+    }
+
+    .project-content a {
+      text-decoration: none;
+      color: var(--accent-color);
+    }
+
+    .project-content p {
+      margin: 5px 0 0;
+      color: #555;
+    }
+
+    footer {
+      background-color: var(--primary-color);
+      color: var(--secondary-color);
+      text-align: center;
+      padding: 15px 10px;
+      font-size: 0.9rem;
+    }
+
+    a {
+      color: var(--accent-color);
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <img src="photo_2025-05-05_13-28-43.jpg" alt="Profile" class="profile-img" />
+    <h1>Arnat Zhagaparov</h1>
+    <p>Front-End Developer | Machine Learning Enthusiast</p>
+  </header>
+
+  <main>
+    <section>
+      <h2>About Me</h2>
+      <p>I'm an ECE student at Nazarbayev University, passionate about ML and web development. I currently research at the ASP-Lab and design websites for IEEE NU.</p>
+    </section>
+
+    <section>
+      <h2>Projects</h2>
+
+      <div class="project project-main">
+        <div class="project-content">
+          <h3>NexTrend Mobile App</h3>
+          <p>AI-powered mobile application providing insights and predictions for stock investors.</p>
+        </div>
+        <div class="screenshot-scroller">
+          <img src="image_2025-06-01_15-12-10.png" alt="NexTrend Screenshot 1">
+          <img src="image_2025-06-01_15-12-10 (2).png" alt="NexTrend Screenshot 2">
+          <img src="image_2025-06-01_15-12-10 (3).png" alt="NexTrend Screenshot 3">
+        </div>
+      </div>
+
+      <div class="project">
+        <div class="project-content">
+          <h3><a href="https://github.com/Tiltediedixiss/License-Plate-Recognition">License Plate Recognition</a></h3>
+          <p>Computer vision project for detecting and reading vehicle license plates.</p>
+        </div>
+      </div>
+
+      <div class="project">
+        <div class="project-content">
+          <h3><a href="https://github.com/Tiltediedixiss/weather">Weather App</a></h3>
+          <p>Responsive weather dashboard using APIs.</p>
+        </div>
+      </div>
+
+      <div class="project">
+        <div class="project-content">
+          <h3><a href="https://github.com/Tiltediedixiss/fraud-detection-ML">Fraud Detection</a></h3>
+          <p>ML model for predicting fraudulent financial transactions.</p>
+        </div>
+      </div>
+
+    </section>
+
+    <section>
+      <h2>Contact</h2>
+      <p>📧 Email: <a href="mailto:arnat.zhagaparov@nu.edu.kz">arnat.zhagaparov@nu.edu.kz</a></p>
+      <p>🐙 GitHub: <a href="https://github.com/Tiltediedixiss">@Tiltediedixiss</a></p>
+      <p>📍 Location: Astana, Kazakhstan</p>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Arnat Zhagaparov</p>
+  </footer>
+</body>
+</html>
